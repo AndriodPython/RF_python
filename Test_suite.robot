@@ -1,8 +1,6 @@
 *** Settings ***
-Library           SeleniumLibrary
+Library           ../RF_SUM_LIB.py
 
 *** Test Cases ***
-Test_case_1
-    Open Browser    http://google.com    ff
-    Close Browser
-    Log To Console    completed Successfully
+Test_cases
+    addition
