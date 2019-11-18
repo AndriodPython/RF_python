@@ -1,0 +1,1676 @@
+{
+  "TEF": {
+    "VERSION": "6.70.0.102",
+    "SEQUENCE": {
+      "NODE": [
+        {
+          "HEAD": {
+            "Type": "TAG_REMARK",
+            "State": "NORMAL",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "Script : VOICE_MO_AUTH"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "TAG_REMARK",
+            "State": "NORMAL",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "Power on UE"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "NORMAL",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "REGISTER .* SIP/2.0
+From: (?<URI_UE>.*)
+To: (?<URI_SS>.*)
+CSeq: (?<REG_CSeq>.*)
+Call-ID: (?<REG_Call-ID>.*)
+Via: (?<REG_Via>.*)",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "False",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "1st REGISTER"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "NORMAL",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 503 Service Unavailable
+From: %URI_UE%
+To: %URI_SS%;tag=7090150-44-13c4-65014-ea6-6a39fc21-ea6
+Call-ID: %REG_Call-ID%
+CSeq: %REG_CSeq%
+Retry-After: 30
+Via: %REG_Via%
+Content-Length: 0",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "Unauthorized"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "NORMAL",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "REGISTER .* SIP/2.0
+From: (?<URI_UE>.*)
+To: (?<URI_SS>.*)
+CSeq: (?<REG_CSeq>.*)
+Call-ID: (?<REG_Call-ID>.*)
+Via: (?<REG_Via>.*)",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "False",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "1st REGISTER"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "NORMAL",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 503 Service Unavailable
+From: %URI_UE%
+To: %URI_SS%;tag=7090150-44-13c4-65014-ea6-6a39fc21-ea6
+Call-ID: %REG_Call-ID%
+CSeq: %REG_CSeq%
+Retry-After: 60
+Via: %REG_Via%
+Content-Length: 0",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "Unauthorized"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "NORMAL",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "REGISTER .* SIP/2.0
+From: (?<URI_UE>.*)
+To: (?<URI_SS>.*)
+CSeq: (?<REG_CSeq>.*)
+Call-ID: (?<REG_Call-ID>.*)
+Via: (?<REG_Via>.*)",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "False",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "1st REGISTER"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "NORMAL",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 503 Service Unavailable
+From: %URI_UE%
+To: %URI_SS%;tag=7090150-44-13c4-65014-ea6-6a39fc21-ea6
+Call-ID: %REG_Call-ID%
+CSeq: %REG_CSeq%
+Retry-After: 90
+Via: %REG_Via%
+Content-Length: 0",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "Unauthorized"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "NORMAL",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "REGISTER .* SIP/2.0
+From: (?<URI_UE>.*)
+To: (?<URI_SS>.*)
+CSeq: (?<REG_CSeq>.*)
+Call-ID: (?<REG_Call-ID>.*)
+Via: (?<REG_Via>.*)",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "False",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "1st REGISTER"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 401 Unauthorized
+From: %URI_UE%
+To: %URI_SS%;tag=7090150-44-13c4-65014-ea6-6a39fc21-ea6
+Call-ID: %REG_Call-ID%
+CSeq: %REG_CSeq%
+WWW-Authenticate: Digest realm=\"test.3gpp.com\",nonce=\"P8ZRvL0PVrwho1G8iR9WvBm3B2qCKYAAmclehYAK0Ls=\",algorithm=AKAv1-MD5,qop=\"auth\"
+Via: %REG_Via%
+Supported: sec-agree
+Security-Server: ipsec-3gpp;prot=esp;mod=trans;alg=%DEFINE.ALG%;ealg=%DEFINE.EALG%;spi-c=411702972;spi-s=961094785;q=0.1;port-c=%DEFINE.PORT_C%;port-s=%DEFINE.PORT_S%
+Content-Length: 0",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "Unauthorized"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "REGISTER .* SIP/2.0
+From: (?<URI_UE>.*)
+To: (?<URI_SS>.*)
+CSeq: (?<REG_CSeq>.*)
+Call-ID: (?<REG_Call-ID>.*)
+Via: (?<REG_Via>.*)
+Contact: (?<REG_Contact>.*)
+Authorization: (.*)(qop=auth)(.*)",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "False",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "2nd REGISTER"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "REGISTER .* SIP/2.0
+From: (?<URI_UE>.*)
+To: (?<URI_SS>.*)
+CSeq: (?<REG_CSeq>.*)
+Call-ID: (?<REG_Call-ID>.*)
+Via: (?<REG_Via>.*)
+Contact: (?<REG_Contact>.*)
+Authorization: Digest nonce=.*,username=.*,uri=.*,realm=.*,algorithm=AKAv1-MD5,response=.*,qop=auth,cnonce=.*,nc=.*",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "False",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "2nd REGISTER"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 200 OK
+From: %URI_UE%
+To: %URI_SS%;tag=7160330-44-13c4-65014-180e-740859e4-180e
+Call-ID: %REG_Call-ID%
+CSeq: %REG_CSeq%
+P-Associated-URI: <sip:%DEFINE.CALLINGNO%@%DEFINE.ADDRESS_UE%>
+Via: %REG_Via%
+Contact: %REG_Contact%;expires=3600
+Content-Length: 0",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "REGISTER"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "TAG_ONE_OF",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": { "-xml:space": "preserve" }
+          },
+          "NODE": [
+            {
+              "HEAD": {
+                "Type": "MSG_MESSAGE",
+                "State": "COMMENTOUT",
+                "Expand": "False"
+              },
+              "FIELDS": {
+                "Message": "SUBSCRIBE .* SIP/2.0
+To: .*
+From: <.*>;(?<SUB_TAG>.*)
+CSeq: (?<SUB_CSeq>.*)
+Call-ID: (?<SUB_Call-ID>.*)
+Via: (?<SUB_Via>.*)
+Contact: sip:(?<IPAdd_UE>.*)\\:(?<IPSec_Port>\\d+).*
+",
+                "Server": "CSCF1",
+                "AutoConfig.Message": "True",
+                "Direction": "True",
+                "Timeout.Enable": "False",
+                "Timeout.Value": "-1",
+                "IgnoreInvalidMessage": "False",
+                "CheckStartLine": "False",
+                "Note": {
+                  "-xml:space": "preserve",
+                  "#text": "iphone"
+                }
+              }
+            },
+            {
+              "HEAD": {
+                "Type": "MSG_MESSAGE",
+                "State": "COMMENTOUT",
+                "Expand": "False"
+              },
+              "FIELDS": {
+                "Message": "SUBSCRIBE .* SIP/2.0
+To: .*
+From: <.*>;(?<SUB_TAG>.*)
+CSeq: (?<SUB_CSeq>.*)
+Call-ID: (?<SUB_Call-ID>.*)
+Via: (?<SUB_Via>.*)
+Contact: <sip:(?<IPAdd_UE>.*)\\:(?<IPSec_Port>\\d+).*>.*
+",
+                "Server": "CSCF1",
+                "AutoConfig.Message": "True",
+                "Direction": "True",
+                "Timeout.Enable": "False",
+                "Timeout.Value": "-1",
+                "IgnoreInvalidMessage": "False",
+                "CheckStartLine": "False",
+                "Note": {
+                  "-xml:space": "preserve",
+                  "#text": "MTK"
+                }
+              }
+            },
+            {
+              "HEAD": {
+                "Type": "MSG_MESSAGE",
+                "State": "COMMENTOUT",
+                "Expand": "False"
+              },
+              "FIELDS": {
+                "Message": "SUBSCRIBE .* SIP/2.0
+To: .*
+From: <.*>;(?<SUB_TAG>.*)
+CSeq: (?<SUB_CSeq>.*)
+Call-ID: (?<SUB_Call-ID>.*)
+Via: (?<SUB_Via>.*)
+Contact: <(?<SUB_Contact>.*)\\@(?<IPAdd_UE>.*)\\:(?<IPSec_Port>\\d+).*>
+",
+                "Server": "CSCF1",
+                "AutoConfig.Message": "True",
+                "Direction": "True",
+                "Timeout.Enable": "False",
+                "Timeout.Value": "-1",
+                "IgnoreInvalidMessage": "False",
+                "CheckStartLine": "False",
+                "Note": {
+                  "-xml:space": "preserve",
+                  "#text": "QCOM"
+                }
+              }
+            },
+            {
+              "HEAD": {
+                "Type": "MSG_MESSAGE",
+                "State": "COMMENTOUT",
+                "Expand": "False"
+              },
+              "FIELDS": {
+                "Message": "SUBSCRIBE .* SIP/2.0
+To: .*
+From: <.*>;(?<SUB_TAG>.*)
+CSeq: (?<SUB_CSeq>.*)
+Call-ID: (?<SUB_Call-ID>.*)
+Via: (?<SUB_Via>.*)
+Contact: <(?<SUB_Contact>.*)\\@(?<IPAdd_UE>.*)\\:(?<IPSec_Port>\\d+).*>;.*
+",
+                "Server": "CSCF1",
+                "AutoConfig.Message": "True",
+                "Direction": "True",
+                "Timeout.Enable": "False",
+                "Timeout.Value": "-1",
+                "IgnoreInvalidMessage": "False",
+                "CheckStartLine": "False",
+                "Note": {
+                  "-xml:space": "preserve",
+                  "#text": "HIDS"
+                }
+              }
+            },
+            {
+              "HEAD": {
+                "Type": "TAG_END",
+                "State": "COMMENTOUT",
+                "Expand": "False"
+              }
+            }
+          ]
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 200 OK
+From: sip:%DEFINE.CALLINGNO%;%SUB_TAG%
+To: sip:%DEFINE.CALLINGNO%;tag=7090510-44-13c4-65014-ea6-5c1a5dc-ea6
+Call-ID: %SUB_Call-ID%
+CSeq: %SUB_CSeq%
+Expires: 3600
+Via: %SUB_Via%
+Contact: <sip:[%SCRIPT.Entry1.IPv6Address%]:%DEFINE.PORT_S%>
+Content-Length: 0",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "SUBSCRIBE"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "NOTIFY sip:%DEFINE.CALLINGNO%@%DEFINE.IPAdd_UE%:%IPSec_Port% SIP/2.0
+Via: SIP/2.0/UDP [%SCRIPT.Entry1.IPv6Address%]:5060;branch=z9hG4bK8e7b1ef46eafbd490417c823bfe650b1
+From: <sip:%DEFINE.CALLINGNO%@%DEFINE.ADDRESS_UE%>;tag=7090510-44-13c4-65014-ea6-5c1a5dc-ea6
+To: <sip:%DEFINE.CALLINGNO%@%DEFINE.ADDRESS_UE%>;%SUB_TAG%
+Call-ID: %SUB_Call-ID%
+CSeq: %VARIABLE.CSeq_Num% NOTIFY
+Subscription-State: active; expires=3600
+Contact: <sip:[%SCRIPT.Entry1.IPv6Address%]:5060>
+Event: reg
+Content-Type: application/reginfo+xml
+Content-Length: 356
+
+<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<reginfo xmlns=\"urn:ietf:params:xml:ns:reginfo\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" version=\"0\" state=\"full\">
+    <registration aor=\"sip:%DEFINE.CALLINGNO%@%DEFINE.ADDRESS_UE%\" id=\"889160506\" state=\"active\">
+        <contact id=\"20533260\" state=\"active\" event=\"registered\">
+            <uri>sip:%DEFINE.CALLINGNO%@%DEFINE.ADDRESS_UE%</uri>
+        </contact>
+    </registration>
+    <registration aor=\"tel:%DEFINE.CALLINGNO%\" id=\"1159105721\" state=\"active\">
+        <contact id=\"623642209\" state=\"active\" event=\"registered\">
+            <uri>tel:%DEFINE.CALLINGNO%</uri>
+        </contact>
+    </registration>
+</reginfo>",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 200 OK
+Via: .*
+To: .*
+From: .*
+Call-ID: .*
+CSeq: .*",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "False",
+            "CheckStartLine": "False",
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "TAG_PAUSE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Text": {
+              "-xml:space": "preserve",
+              "#text": "ContinueNextStep"
+            },
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "TAG_REMARK",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "OutGoing call: 1111"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "INVITE .* SIP/2.0
+Via: (?<INV_Via>.*)
+To: (?<URI_SS>.*)
+From: (?<URI_UE>.*)
+Call-ID: (?<INV_Call-ID>.*)
+CSeq: (?<INV_CSeq>.*)
+
+m=audio (?<RTP_Port>\\d+).*
+b=AS:(?<AS_VALUE>\\d+)
+a=rtpmap:(?<AMR_ID>\\d+) AMR-WB(?<AMR_CODEC>.*)
+a=fmtp:\\d+ (?<AMR_FMTP>.*)
+a=rtpmap:(?<DTMF_ID>\\d+) telephone-event(?<DTMF_CODEC>.*)",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 100 Trying
+Via: %INV_Via%
+To: %URI_SS%
+From: %URI_UE%
+Call-ID: %INV_Call-ID%
+CSeq: %INV_CSeq%
+Content-Length: 0",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "TAG_SMARTSTUDIO",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "ControlType": "SET_TERMINATION",
+            "ControlData": "<BearerParam>
+  <VNID>1</VNID>
+  <IPType>IPv6</IPType>
+  <IPAddress>%SCRIPT.Entry1.IPv6Address%</IPAddress>
+  <NumOfCallID>1</NumOfCallID>
+  <Call>
+    <CallID>1</CallID>
+    <NumOfService>1</NumOfService>
+    <Service>
+      <ServiceInformation>
+        <MediaType>audio</MediaType>
+        <RTCPFlow>Enable</RTCPFlow>
+        <FlowStatus>ENABLED</FlowStatus>
+        <MaxRequestedBandwidthUL>%AS_VALUE%000</MaxRequestedBandwidthUL>
+        <MaxRequestedBandwidthDL>%AS_VALUE%000</MaxRequestedBandwidthDL>
+        <MinRequestedBandwidthUL>notPresent</MinRequestedBandwidthUL>
+         <MinRequestedBandwidthDL>notPresent</MinRequestedBandwidthDL>
+        <RRBandwidth>0</RRBandwidth>
+        <RSBandwidth>0</RSBandwidth>
+      </ServiceInformation>
+      <TFTParameter>
+        <RemoteAddressType>IPv6</RemoteAddressType>
+        <RemoteAddress>%SCRIPT.Entry1.IPv6Address%</RemoteAddress>
+        <PortType>Single</PortType>
+        <SourcePort>%RTP_Port%</SourcePort>
+        <RemotePort>%RTPRTCP.Entry1.RTPPort%</RemotePort>
+        <SourcePortRTCP>%RTP_Port%+1</SourcePortRTCP>
+        <RemotePortRTCP>%RTPRTCP.Entry1.RTCPPort%</RemotePortRTCP>
+        <NextHeader>17</NextHeader>
+        <ServiceName>Service</ServiceName>
+      </TFTParameter>
+    </Service>
+  </Call>
+</BearerParam>
+",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "Teminate audio bearer"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 183 Session Progress
+Via: %INV_Via%
+To: %URI_SS%;tag=wg9ygdd7sasabheapbdzm88pxd6p3328
+From: %URI_UE%
+Call-ID: %INV_Call-ID%
+CSeq: %INV_CSeq%
+Allow: ACK, BYE, CANCEL, INVITE, PRACK, UPDATE
+Contact: <sip:[%SCRIPT.Entry1.IPv6Address%]:5060>
+Content-Length: 492
+Content-Type: application/sdp
+Require: 100rel,precondition
+RSeq: 1
+
+v=0
+o=- 3597390325 3597390325 IN IP6 %SCRIPT.Entry1.IPv6Address%
+s=SAMPLE CALL
+c=IN IP6 %SCRIPT.Entry1.IPv6Address%
+b=AS:%AS_VALUE%
+b=RS:0
+b=RR:0
+t=0 0
+m=audio %RTPRTCP.Entry1.RTPPort% RTP/AVP %AMR_ID% %DTMF_ID%
+b=AS:%AS_VALUE%
+b=RS:0
+b=RR:0
+a=curr:qos local none
+a=curr:qos remote none
+a=des:qos mandatory local sendrecv
+a=des:qos mandatory remote sendrecv
+a=conf:qos remote sendrecv
+a=sendrecv
+a=rtpmap:%AMR_ID% AMR-WB%AMR_CODEC%
+a=fmtp:%AMR_ID% %AMR_FMTP%
+a=rtpmap:%DTMF_ID% telephone-event%DTMF_CODEC%
+a=fmtp:%DTMF_ID% 0-15",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "PRACK .* SIP/2.0
+Via: (?<PRACK_Via>.*)
+To: .*
+From: (?<URI_UE>.*)
+Call-ID: (?<PRACK_Call-ID>.*)
+CSeq: (?<PRACK_CSeq>.*)",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 200 OK
+Via: %PRACK_Via%
+To: %URI_SS%;tag=wg9ygdd7sasabheapbdzm88pxd6p3328
+From: %URI_UE%
+Call-ID: %PRACK_Call-ID%
+CSeq: %PRACK_CSeq%
+Content-Length: 0",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "PRACK"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "UPDATE .* SIP/2.0
+Via: (?<UPDATE_Via>.*)
+To: .*
+From: (?<URI_UE>.*)
+Call-ID: (?<UPDATE_Call-ID>.*)
+CSeq: (?<UPDATE_CSeq>.*)
+
+b=AS:(?<AS_VALUE>\\d+)
+a=rtpmap:(?<AMR_ID>\\d+) AMR-WB(?<AMR_CODEC>.*)
+a=fmtp:\\d+ (?<AMR_FMTP>.*)
+a=rtpmap:(?<DTMF_ID>\\d+) telephone-event(?<DTMF_CODEC>.*)",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 200 OK
+Via: %UPDATE_Via%
+To: %URI_SS%;tag=wg9ygdd7sasabheapbdzm88pxd6p3328
+From: %URI_UE%
+Call-ID: %UPDATE_Call-ID%
+CSeq: %UPDATE_CSeq%
+Contact: <sip:[%SCRIPT.Entry1.IPv6Address%]:5060>
+Content-Length: 472
+Content-Type: application/sdp
+Require: precondition
+
+v=0
+o=- 3597390325 3597390326 IN IP6 %SCRIPT.Entry1.IPv6Address%
+s=SAMPLE CALL
+c=IN IP6 %SCRIPT.Entry1.IPv6Address%
+b=AS:%AS_VALUE%
+b=RS:0
+b=RR:0
+t=0 0
+m=audio %RTPRTCP.Entry1.RTPPort% RTP/AVP %AMR_ID% %DTMF_ID%
+b=AS:%AS_VALUE%
+b=RS:0
+b=RR:0
+a=curr:qos local sendrecv
+a=curr:qos remote sendrecv
+a=des:qos mandatory local sendrecv
+a=des:qos mandatory remote sendrecv
+a=sendrecv
+a=rtpmap:%AMR_ID% AMR-WB%AMR_CODEC%
+a=fmtp:%AMR_ID% %AMR_FMTP%
+a=rtpmap:%DTMF_ID% telephone-event%DTMF_CODEC%
+a=fmtp:%DTMF_ID% 0-15",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "UPDATE"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 180 Ringing
+Via: %INV_Via%
+To: %URI_SS%;tag=wg9ygdd7sasabheapbdzm88pxd6p3328
+From: %URI_UE%
+Call-ID: %INV_Call-ID%
+CSeq: %INV_CSeq%
+Allow: ACK, BYE, CANCEL, INVITE, PRACK, UPDATE
+Contact: <sip:[%SCRIPT.Entry1.IPv6Address%]:5060>
+Content-Length: 0
+Require: 100rel,precondition
+RSeq: 2",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "PRACK .* SIP/2.0
+Via: (?<PRACK_Via>.*)
+To: .*
+From: (?<URI_UE>.*)
+Call-ID: (?<PRACK_Call-ID>.*)
+CSeq: (?<PRACK_CSeq>.*)",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 200 OK
+Via: %PRACK_Via%
+To: %URI_SS%;tag=wg9ygdd7sasabheapbdzm88pxd6p3328
+From: %URI_UE%
+Call-ID: %PRACK_Call-ID%
+CSeq: %PRACK_CSeq%
+Content-Length: 0",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "PRACK"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 200 OK
+Via: %INV_Via%
+To: %URI_SS%;tag=wg9ygdd7sasabheapbdzm88pxd6p3328
+From: %URI_UE%
+Call-ID: %INV_Call-ID%
+CSeq: %INV_CSeq%
+Allow: ACK, BYE, CANCEL, INVITE, PRACK, UPDATE
+Contact: <sip:[%SCRIPT.Entry1.IPv6Address%]:5060>
+Content-Length: 0
+Require: 100rel,precondition,timer
+Session-Expires: 300;refresher=uac",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "INVITE"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "ACK .* SIP/2.0
+Via: .*
+To: .*
+From: .*
+Call-ID: .*
+CSeq: .*
+",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "TAG_PAUSE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Text": {
+              "-xml:space": "preserve",
+              "#text": "ContinueNextStep"
+            },
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "TAG_REMARK",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "hold call"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "INVITE .* SIP/2.0
+Via: (?<REINV_Via>.*)
+To: (?<REURI_SS>.*)
+From: (?<REURI_UE>.*)
+Call-ID: (?<REINV_Call-ID>.*)
+CSeq: (?<REINV_CSeq>.*)
+
+m=audio (?<RERTP_Port>\\d+).*
+b=AS:(?<REAS_VALUE>\\d+)
+a=rtpmap:(?<REAMR_ID>\\d+) AMR-WB(?<REAMR_CODEC>.*)
+a=fmtp:\\d+ (?<REAMR_FMTP>.*)
+a=rtpmap:(?<REDTMF_ID>\\d+) telephone-event(?<REDTMF_CODEC>.*)",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "REINVITE"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 100 Trying
+Via: %REINV_Via%
+To: %REURI_SS%
+From: %REURI_UE%
+Call-ID: %REINV_Call-ID%
+CSeq: %REINV_CSeq%
+Content-Length: 0",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 200 OK
+Via: %REINV_Via%
+To: %REURI_SS%;tag=wg9ygdd7sasabheapbdzm88pxd6p3328
+From: %REURI_UE%
+Call-ID: %REINV_Call-ID%
+CSeq: %REINV_CSeq%
+Contact: <sip:[%SCRIPT.Entry1.IPv6Address%]:5060>
+Require: timer
+Session-Expires: 1800;refresher=uac
+Content-Length: 410
+Content-Type: application/sdp
+
+v=0
+o=- 3597390325 3597390326 IN IP6 %SCRIPT.Entry1.IPv6Address%
+s=SAMPLE CALL
+c=IN IP6 %SCRIPT.Entry1.IPv6Address%
+b=AS:%REAS_VALUE%
+b=RS:0
+b=RR:0
+t=0 0
+m=audio %RTPRTCP.Entry1.RTPPort% RTP/AVP %REAMR_ID% %REDTMF_ID%
+b=AS:%REAS_VALUE%
+b=RS:0
+b=RR:0
+a=rtpmap:%REAMR_ID% AMR-WB%REAMR_CODEC%
+a=fmtp:%REAMR_ID% %REAMR_FMTP%
+a=recvonly
+a=rtpmap:%REDTMF_ID% telephone-event%REDTMF_CODEC%
+a=fmtp:%REDTMF_ID% 0-15",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "REINVITE"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "ACK .* SIP/2.0
+Via: .*
+To: .*
+From: .*
+Call-ID: .*
+CSeq: .*",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "TAG_SMARTSTUDIO",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "ControlType": "UPDATE_TERMINATION",
+            "ControlData": "<BearerParam>
+  <VNID>1</VNID>
+  <IPType>IPv6</IPType>
+  <IPAddress>%SCRIPT.Entry1.IPv6Address%</IPAddress>
+  <NumOfCallID>1</NumOfCallID>
+  <Call>
+    <CallID>1</CallID>
+    <NumOfService>1</NumOfService>
+    <Service>
+      <ServiceInformation>
+        <MediaType>audio</MediaType>
+        <RTCPFlow>Enable</RTCPFlow>
+        <FlowStatus>ENABLED_UPLINK</FlowStatus>
+        <MaxRequestedBandwidthUL>%REAS_VALUE%000</MaxRequestedBandwidthUL>
+        <MaxRequestedBandwidthDL>%REAS_VALUE%000</MaxRequestedBandwidthDL>
+        <MinRequestedBandwidthUL>notPresent</MinRequestedBandwidthUL>
+         <MinRequestedBandwidthDL>notPresent</MinRequestedBandwidthDL>
+        <RRBandwidth>0</RRBandwidth>
+        <RSBandwidth>0</RSBandwidth>
+      </ServiceInformation>
+      <TFTParameter>
+        <RemoteAddressType>IPv6</RemoteAddressType>
+        <RemoteAddress>%SCRIPT.Entry1.IPv6Address%</RemoteAddress>
+        <PortType>Single</PortType>
+        <SourcePort>%RERTP_Port%</SourcePort>
+        <RemotePort>%RTPRTCP.Entry1.RTPPort%</RemotePort>
+        <SourcePortRTCP>%RERTP_Port%+1</SourcePortRTCP>
+        <RemotePortRTCP>%RTPRTCP.Entry1.RTCPPort%</RemotePortRTCP>
+        <NextHeader>17</NextHeader>
+        <ServiceName>Service</ServiceName>
+      </TFTParameter>
+    </Service>
+  </Call>
+</BearerParam>",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "Teminate audio bearer"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "TAG_WAIT",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Value": "90000",
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "TAG_PAUSE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Text": {
+              "-xml:space": "preserve",
+              "#text": "ContinueNextStep"
+            },
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "TAG_REMARK",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "unhold call"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "INVITE .* SIP/2.0
+Via: (?<REINV_Via>.*)
+To: (?<REURI_SS>.*)
+From: (?<REURI_UE>.*)
+Call-ID: (?<REINV_Call-ID>.*)
+CSeq: (?<REINV_CSeq>.*)
+
+m=audio (?<RERTP_Port>\\d+).*
+b=AS:(?<REAS_VALUE>\\d+)
+a=rtpmap:(?<REAMR_ID>\\d+) AMR-WB(?<REAMR_CODEC>.*)
+a=fmtp:\\d+ (?<REAMR_FMTP>.*)
+a=rtpmap:(?<REDTMF_ID>\\d+) telephone-event(?<REDTMF_CODEC>.*)",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "REINVITE"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 100 Trying
+Via: %REINV_Via%
+To: %REURI_SS%
+From: %REURI_UE%
+Call-ID: %REINV_Call-ID%
+CSeq: %REINV_CSeq%
+Content-Length: 0",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 200 OK
+Via: %REINV_Via%
+To: %REURI_SS%;tag=wg9ygdd7sasabheapbdzm88pxd6p3328
+From: %REURI_UE%
+Call-ID: %REINV_Call-ID%
+CSeq: %REINV_CSeq%
+Contact: <sip:[%SCRIPT.Entry1.IPv6Address%]:5060>
+Require: timer
+Session-Expires: 1800;refresher=uac
+Content-Length: 410
+Content-Type: application/sdp
+
+v=0
+o=- 3597390325 3597390326 IN IP6 %SCRIPT.Entry1.IPv6Address%
+s=SAMPLE CALL
+c=IN IP6 %SCRIPT.Entry1.IPv6Address%
+b=AS:%REAS_VALUE%
+b=RS:0
+b=RR:0
+t=0 0
+m=audio %RTPRTCP.Entry1.RTPPort% RTP/AVP %REAMR_ID% %REDTMF_ID%
+b=AS:%REAS_VALUE%
+b=RS:0
+b=RR:0
+a=rtpmap:%REAMR_ID% AMR-WB%REAMR_CODEC%
+a=fmtp:%REAMR_ID% %REAMR_FMTP%
+a=sendrecv
+a=rtpmap:%REDTMF_ID% telephone-event%REDTMF_CODEC%
+a=fmtp:%REDTMF_ID% 0-15",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "REINVITE"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "ACK .* SIP/2.0
+Via: .*
+To: .*
+From: .*
+Call-ID: .*
+CSeq: .*",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "TAG_SMARTSTUDIO",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "ControlType": "UPDATE_TERMINATION",
+            "ControlData": "<BearerParam>
+  <VNID>1</VNID>
+  <IPType>IPv6</IPType>
+  <IPAddress>%SCRIPT.Entry1.IPv6Address%</IPAddress>
+  <NumOfCallID>1</NumOfCallID>
+  <Call>
+    <CallID>1</CallID>
+    <NumOfService>1</NumOfService>
+    <Service>
+      <ServiceInformation>
+        <MediaType>audio</MediaType>
+        <RTCPFlow>Enable</RTCPFlow>
+        <FlowStatus>ENABLED</FlowStatus>
+        <MaxRequestedBandwidthUL>%REAS_VALUE%000</MaxRequestedBandwidthUL>
+        <MaxRequestedBandwidthDL>%REAS_VALUE%000</MaxRequestedBandwidthDL>
+        <MinRequestedBandwidthUL>notPresent</MinRequestedBandwidthUL>
+         <MinRequestedBandwidthDL>notPresent</MinRequestedBandwidthDL>
+        <RRBandwidth>0</RRBandwidth>
+        <RSBandwidth>0</RSBandwidth>
+      </ServiceInformation>
+      <TFTParameter>
+        <RemoteAddressType>IPv6</RemoteAddressType>
+        <RemoteAddress>%SCRIPT.Entry1.IPv6Address%</RemoteAddress>
+        <PortType>Single</PortType>
+        <SourcePort>%RERTP_Port%</SourcePort>
+        <RemotePort>%RTPRTCP.Entry1.RTPPort%</RemotePort>
+        <SourcePortRTCP>%RERTP_Port%+1</SourcePortRTCP>
+        <RemotePortRTCP>%RTPRTCP.Entry1.RTCPPort%</RemotePortRTCP>
+        <NextHeader>17</NextHeader>
+        <ServiceName>Service</ServiceName>
+      </TFTParameter>
+    </Service>
+  </Call>
+</BearerParam>",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "Teminate audio bearer"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "TAG_WAIT",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Value": "10000",
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "TAG_PAUSE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Text": {
+              "-xml:space": "preserve",
+              "#text": "ContinueNextStep"
+            },
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "TAG_REMARK",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "Voice call release by UE"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "BYE sip:%DEFINE.CALLINGNO%@%DEFINE.IPAdd_UE%:%IPSec_Port% SIP/2.0
+Via: SIP/2.0/UDP [%SCRIPT.Entry1.IPv6Address%]:%DEFINE.PORT_S%;branch=z9hG4bK-1247066540
+Call-ID: %INV_Call-ID%
+From:%URI_SS%;tag=wg9ygdd7sasabheapbdzm88pxd6p3328
+To: %URI_UE%
+CSeq: 1 BYE
+Max-Forwards: 64
+P-Asserted-Identity:%URI_SS%
+Content-Length: 0",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "TAG_SMARTSTUDIO",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "ControlType": "SET_RELEASE_FROM_IMS",
+            "ControlData": "<BearerParam>
+  <VNID>1</VNID>
+</BearerParam>
+",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "Release audio bearer"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 200 OK
+Via: .*
+To: .*
+From: .*
+Call-ID: .*
+CSeq: .*",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "BYE"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "BYE .* SIP/2.0
+Via: (?<BYE_Via>.*)
+To: (?<URI_SS>.*)
+From: (?<URI_UE>.*)
+Call-ID: (?<BYE_Call-ID>.*)
+CSeq: (?<BYE_CSeq>.*)",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 200 OK
+Via: %BYE_Via%
+To: %URI_SS%;tag=wg9ygdd7sasabheapbdzm88pxd6p3328
+From: %URI_UE%
+Call-ID: %BYE_Call-ID%
+CSeq: %BYE_CSeq%
+Content-Length: 0",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "BYE"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "TAG_PAUSE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Text": {
+              "-xml:space": "preserve",
+              "#text": "ContinueNextStep"
+            },
+            "Note": { "-xml:space": "preserve" }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "TAG_REMARK",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "Power off UE"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "REGISTER .* SIP/2.0
+From: (?<URI_UE>.*)
+To: (?<URI_SS>.*)
+CSeq: (?<REG_CSeq>.*)
+Call-ID: (?<REG_Call-ID>.*)
+Via: (?<REG_Via>.*)",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "True",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "False",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "1st REGISTER"
+            }
+          }
+        },
+        {
+          "HEAD": {
+            "Type": "MSG_MESSAGE",
+            "State": "COMMENTOUT",
+            "Expand": "False"
+          },
+          "FIELDS": {
+            "Message": "SIP/2.0 200 OK
+From: %URI_UE%
+To: %URI_SS%;tag=7160330-44-13c4-65014-180e-740859e4-180d
+Call-ID: %REG_Call-ID%
+CSeq: %REG_CSeq%
+P-Associated-URI: <sip:%DEFINE.CALLINGNO%@%DEFINE.ADDRESS_UE%>
+Via: %REG_Via%
+Contact: %REG_Contact%;expires=0
+Content-Length: 0",
+            "Server": "CSCF1",
+            "AutoConfig.Message": "True",
+            "Direction": "False",
+            "Timeout.Enable": "False",
+            "Timeout.Value": "-1",
+            "IgnoreInvalidMessage": "True",
+            "CheckStartLine": "False",
+            "Note": {
+              "-xml:space": "preserve",
+              "#text": "REGISTER"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
